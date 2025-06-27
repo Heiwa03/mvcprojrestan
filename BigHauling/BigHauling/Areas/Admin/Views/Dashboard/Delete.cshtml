@@ -1,0 +1,39 @@
+@model BigHauling.Domain.Entities.Truck
+
+@{
+    ViewData["Title"] = "Delete Truck";
+}
+
+<div class="container mt-5">
+    <h1 class="display-4 text-danger">Delete Confirmation</h1>
+    <h3>Are you sure you want to delete the truck: <strong>@Model.Name</strong>?</h3>
+    
+    <div class="card shadow-sm mt-4">
+        <div class="card-header">
+            <h4>Truck Details</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Name)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+                
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Brand)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Brand)</dd>
+                
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Model)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Model)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Price)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Price)</dd>
+            </dl>
+            
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="mt-4 text-center">
+                    <button type="submit" class="btn btn-danger btn-lg me-2"><i class="fas fa-trash-alt"></i> Yes, Delete</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-lg"><i class="fas fa-times"></i> No, Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
