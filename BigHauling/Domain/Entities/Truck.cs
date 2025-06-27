@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BigHauling.Models
+namespace BigHauling.Domain.Entities
 {
     public class Truck
     {

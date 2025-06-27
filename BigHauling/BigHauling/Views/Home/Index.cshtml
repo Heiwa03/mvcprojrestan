@@ -1,5 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
+    var featuredTrucks = ViewBag.FeaturedTrucks as List<BigHauling.Domain.Entities.Truck> ?? new List<BigHauling.Domain.Entities.Truck>();
 }
 
 <div class="text-center">

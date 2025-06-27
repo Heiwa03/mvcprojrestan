@@ -10,6 +10,8 @@ namespace BigHauling.BusinessLogic.Data
         {
         }
 
+        public DbSet<Truck> Trucks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
