@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using BigHauling.BusinessLogic.Data;
+using BigHauling.BusinessLogic.Interfaces;
+using BigHauling.BusinessLogic.Core;
 using BigHauling.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Account/AccessDenied";
 });
+
+builder.Services.AddScoped<IAdminAPI, AdminAPI>();
 
 var app = builder.Build();
 
