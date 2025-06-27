@@ -2,6 +2,8 @@ using BigHauling.Domain.Entities;
 using BigHauling.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BigHauling.Controllers
 {
@@ -10,10 +12,11 @@ namespace BigHauling.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController()
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            var bl = new BusinessLogic.BusinessLogic();
+            _userManager = bl.GetUserManager();
+            _signInManager = bl.GetSignInManager();
         }
 
         [HttpGet]

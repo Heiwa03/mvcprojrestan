@@ -1,30 +1,24 @@
 using System.Diagnostics;
 using BigHauling.Models;
 using Microsoft.AspNetCore.Mvc;
-using BigHauling.Domain.Entities;
-using BigHauling.BusinessLogic.Data;
-using Microsoft.EntityFrameworkCore;
+using BigHauling.BusinessLogic.Interfaces;
+using System.Threading.Tasks;
 
 namespace BigHauling.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext _context;
+        private readonly ITruckService _truckService;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public HomeController()
         {
-            _logger = logger;
-            _context = context;
+            var bl = new BusinessLogic.BusinessLogic();
+            _truckService = bl.GetTruckService();
         }
 
         public async Task<IActionResult> Index()
         {
-            ViewBag.FeaturedTrucks = await _context.Trucks
-                .Where(t => t.IsAvailable)
-                .OrderByDescending(t => t.CreatedAt)
-                .Take(3)
-                .ToListAsync();
+            ViewBag.FeaturedTrucks = await _truckService.GetFeaturedTrucksAsync();
             return View();
         }
 
