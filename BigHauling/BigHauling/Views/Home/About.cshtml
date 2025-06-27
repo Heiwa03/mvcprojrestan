@@ -1,0 +1,149 @@
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>About BigHauling</h1>
+                <p class="lead">Your trusted partner in the trucking industry for over 15 years. We specialize in connecting businesses with quality trucks that drive success.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <i class="fas fa-building" style="font-size: 10rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Story -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title text-start">Our Story</h2>
+                <p class="lead">Founded in 2009, BigHauling started as a small family business with a big vision: to revolutionize how businesses find and purchase quality trucks.</p>
+                <p>What began as a local truck dealership has grown into one of the most trusted names in the industry, serving customers across 25+ states. Our commitment to quality, transparency, and customer satisfaction has remained unchanged throughout our journey.</p>
+                <p>Today, we're proud to offer one of the largest inventories of quality trucks in the region, backed by our experienced team and comprehensive support services.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <div class="feature-card text-center">
+                            <i class="fas fa-truck" style="color: #28a745;"></i>
+                            <h4 class="fw-bold">500+</h4>
+                            <p>Trucks in Stock</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="feature-card text-center">
+                            <i class="fas fa-users" style="color: #007bff;"></i>
+                            <h4 class="fw-bold">1000+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="feature-card text-center">
+                            <i class="fas fa-map-marker-alt" style="color: #ffc107;"></i>
+                            <h4 class="fw-bold">25+</h4>
+                            <p>States Served</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="feature-card text-center">
+                            <i class="fas fa-award" style="color: #dc3545;"></i>
+                            <h4 class="fw-bold">15+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Values</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h5>Integrity</h5>
+                    <p>We believe in honest, transparent business practices. Every truck we sell comes with complete history and honest condition reports.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h5>Quality</h5>
+                    <p>We never compromise on quality. Every truck undergoes rigorous inspection and meets our high standards before being offered for sale.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h5>Customer Focus</h5>
+                    <p>Our customers are our priority. We provide personalized service and support throughout the entire buying process and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Our Leadership Team</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-tie" style="font-size: 4rem; color: #007bff; margin-bottom: 1rem;"></i>
+                        <h5 class="card-title">John Smith</h5>
+                        <p class="text-muted">CEO & Founder</p>
+                        <p class="card-text">With over 20 years in the trucking industry, John leads our company with vision and expertise.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-tie" style="font-size: 4rem; color: #007bff; margin-bottom: 1rem;"></i>
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="text-muted">Operations Manager</p>
+                        <p class="card-text">Sarah ensures smooth operations and maintains our high standards of service quality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-tie" style="font-size: 4rem; color: #007bff; margin-bottom: 1rem;"></i>
+                        <h5 class="card-title">Mike Davis</h5>
+                        <p class="text-muted">Sales Director</p>
+                        <p class="card-text">Mike leads our sales team and helps customers find the perfect truck for their needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h2>Ready to Work With Us?</h2>
+        <p class="lead mb-4">Join our growing family of satisfied customers and experience the BigHauling difference.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a asp-controller="Trucks" asp-action="Index" class="btn btn-primary btn-lg">
+                <i class="fas fa-truck me-2"></i>Browse Our Inventory
+            </a>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-phone me-2"></i>Get in Touch
+            </a>
+        </div>
+    </div>
+</section> 

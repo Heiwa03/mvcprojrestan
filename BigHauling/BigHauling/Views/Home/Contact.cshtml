@@ -1,0 +1,214 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Contact Us</h1>
+                <p class="lead">Ready to find your perfect truck? Get in touch with our expert team. We're here to help you make the right choice.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <i class="fas fa-phone" style="font-size: 10rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title text-start">Get in Touch</h2>
+                <p class="lead mb-4">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone text-primary me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6 class="mb-0">Phone</h6>
+                                <p class="mb-0">(555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6 class="mb-0">Email</h6>
+                                <p class="mb-0">info@bighauling.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6 class="mb-0">Address</h6>
+                                <p class="mb-0">123 Truck Avenue<br>City, State 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-clock text-primary me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6 class="mb-0">Hours</h6>
+                                <p class="mb-0">Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Send us a Message</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="truck-inquiry">Truck Inquiry</option>
+                                    <option value="financing">Financing Questions</option>
+                                    <option value="service">Service & Support</option>
+                                    <option value="general">General Information</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Find Us</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="bg-secondary text-white text-center py-5">
+                            <i class="fas fa-map" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                            <h4>Interactive Map Coming Soon</h4>
+                            <p class="mb-0">Our location: 123 Truck Avenue, City, State 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                Do you offer financing options?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer flexible financing options through our network of lenders. We can help you find the best rates and terms for your situation.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                Can I trade in my current truck?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! We accept trade-ins and will provide you with a fair market value assessment for your current vehicle.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Do you provide warranty coverage?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, all our trucks come with warranty coverage. The specific terms depend on the truck's age, condition, and manufacturer warranty.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                Can you deliver trucks to my location?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer delivery services within our service area. Contact us for specific delivery options and pricing for your location.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h2>Ready to Get Started?</h2>
+        <p class="lead mb-4">Contact us today and let our experts help you find the perfect truck for your business.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="tel:(555)123-4567" class="btn btn-primary btn-lg">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a asp-controller="Trucks" asp-action="Index" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-truck me-2"></i>Browse Inventory
+            </a>
+        </div>
+    </div>
+</section> 
