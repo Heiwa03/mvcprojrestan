@@ -3,7 +3,85 @@
     var featuredTrucks = ViewBag.FeaturedTrucks as List<BigHauling.Domain.Entities.Truck> ?? new List<BigHauling.Domain.Entities.Truck>();
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="hero-section text-center text-white">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-3 fw-bold">Find Your Next Powerhouse</h1>
+        <p class="lead fs-4">The nation's most trusted marketplace for premium, pre-owned commercial trucks.</p>
+        <a asp-controller="Trucks" asp-action="Index" class="btn btn-primary btn-lg mt-3">
+            <i class="fas fa-truck-moving me-2"></i> View Full Inventory
+        </a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <!-- Featured Trucks Section -->
+    <section id="featured-trucks" class="mb-5">
+        <h2 class="text-center display-5 mb-4">Featured Trucks</h2>
+        <div class="row g-4">
+            @if (featuredTrucks.Any())
+            {
+                @foreach (var truck in featuredTrucks)
+                {
+                    <div class="col-md-4">
+                        <div class="card truck-card h-100 shadow-sm">
+                            <img src="@(string.IsNullOrEmpty(truck.ImageUrl) ? "https://via.placeholder.com/400x300.png?text=No+Image" : truck.ImageUrl)" class="card-img-top" alt="@truck.Name">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">@truck.Name</h5>
+                                <p class="card-text text-muted">@truck.Brand &bull; @truck.Year</p>
+                                <h4 class="text-primary mb-3">@truck.Price.ToString("C0")</h4>
+                                <a asp-controller="Trucks" asp-action="Details" asp-route-id="@truck.Id" class="btn btn-outline-primary mt-auto">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col">
+                    <p class="text-center text-muted">No featured trucks are available at the moment. Please check back later!</p>
+                </div>
+            }
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-5 bg-light rounded shadow-sm mb-5">
+        <div class="container text-center">
+            <h2 class="display-5 mb-5">Why Big Hauling?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon bg-primary text-white mb-3">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                    <h3>Quality Inspected</h3>
+                    <p class="lead text-muted">Every truck undergoes a rigorous multi-point inspection to ensure it meets the highest standards of quality and reliability.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon bg-primary text-white mb-3">
+                        <i class="fas fa-wallet fa-2x"></i>
+                    </div>
+                    <h3>Flexible Financing</h3>
+                    <p class="lead text-muted">We work with a network of lenders to offer competitive financing and leasing options tailored to your business needs.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon bg-primary text-white mb-3">
+                        <i class="fas fa-globe-americas fa-2x"></i>
+                    </div>
+                    <h3>Nationwide Delivery</h3>
+                    <p class="lead text-muted">No matter where you are, we can deliver your newly purchased truck right to your doorstep, safely and efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section id="final-cta" class="text-center py-5">
+         <h2 class="display-5">Ready to Get Started?</h2>
+         <p class="lead text-muted mb-4">Your next truck is waiting for you in our extensive inventory.</p>
+         <a asp-controller="Trucks" asp-action="Index" class="btn btn-primary btn-lg">
+            <i class="fas fa-truck me-2"></i> Explore All Trucks
+         </a>
+    </section>
 </div>
