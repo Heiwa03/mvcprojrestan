@@ -1,8 +1,7 @@
-using BigHauling.BusinessLogic.Data;
 using BigHauling.Domain.Entities;
+using BigHauling.BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace BigHauling.Areas.Admin.Controllers
@@ -11,17 +10,17 @@ namespace BigHauling.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IAdminAPI _adminAPI;
 
-        public DashboardController(ApplicationDbContext context)
+        public DashboardController(IAdminAPI adminAPI)
         {
-            _context = context;
+            _adminAPI = adminAPI;
         }
 
         // GET: Admin/Dashboard
         public async Task<IActionResult> Index()
         {
-            var trucks = await _context.Trucks.ToListAsync();
+            var trucks = await _adminAPI.GetAllTrucksAsync();
             return View(trucks);
         }
 
@@ -38,8 +37,7 @@ namespace BigHauling.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(truck);
-                await _context.SaveChangesAsync();
+                await _adminAPI.CreateTruckAsync(truck);
                 return RedirectToAction(nameof(Index));
             }
             return View(truck);
@@ -48,16 +46,9 @@ namespace BigHauling.Areas.Admin.Controllers
         // GET: Admin/Dashboard/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var truck = await _context.Trucks.FindAsync(id);
-            if (truck == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
+            var truck = await _adminAPI.GetTruckByIdAsync(id.Value);
+            if (truck == null) return NotFound();
             return View(truck);
         }
 
@@ -66,29 +57,12 @@ namespace BigHauling.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Truck truck)
         {
-            if (id != truck.Id)
-            {
-                return NotFound();
-            }
+            if (id != truck.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(truck);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TruckExists(truck.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                var success = await _adminAPI.UpdateTruckAsync(truck);
+                if (!success) return NotFound();
                 return RedirectToAction(nameof(Index));
             }
             return View(truck);
@@ -97,18 +71,9 @@ namespace BigHauling.Areas.Admin.Controllers
         // GET: Admin/Dashboard/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var truck = await _context.Trucks
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (truck == null)
-            {
-                return NotFound();
-            }
-
+            if (id == null) return NotFound();
+            var truck = await _adminAPI.GetTruckByIdAsync(id.Value);
+            if (truck == null) return NotFound();
             return View(truck);
         }
 
@@ -117,19 +82,8 @@ namespace BigHauling.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var truck = await _context.Trucks.FindAsync(id);
-            if (truck != null)
-            {
-                _context.Trucks.Remove(truck);
-                await _context.SaveChangesAsync();
-            }
-            
+            await _adminAPI.DeleteTruckAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool TruckExists(int id)
-        {
-            return _context.Trucks.Any(e => e.Id == id);
         }
     }
 } 
