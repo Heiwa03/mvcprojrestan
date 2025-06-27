@@ -5,11 +5,11 @@ VisualStudioVersion = 17.14.36119.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigHauling", "BigHauling\BigHauling.csproj", "{D4587144-E1B1-4CB8-81FF-248EAFB89231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigHauling.BusinessLogic", "BusinessLogic\BigHauling.BusinessLogic.csproj", "{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{CA8F8902-73D9-405A-9BB2-EF4710DC601B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigHauling.Domain", "Domain\BigHauling.Domain.csproj", "{CA8F8902-73D9-405A-9BB2-EF4710DC601B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{8DF5B046-F3B0-48D6-912C-247AC5F9D83D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigHauling.Helpers", "Helpers\BigHauling.Helpers.csproj", "{8DF5B046-F3B0-48D6-912C-247AC5F9D83D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
