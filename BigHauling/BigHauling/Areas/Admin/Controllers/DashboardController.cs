@@ -12,9 +12,10 @@ namespace BigHauling.Areas.Admin.Controllers
     {
         private readonly IAdminAPI _adminAPI;
 
-        public DashboardController(IAdminAPI adminAPI)
+        public DashboardController()
         {
-            _adminAPI = adminAPI;
+            var bl = new BusinessLogic.BusinessLogic();
+            _adminAPI = bl.GetAdminAPI();
         }
 
         // GET: Admin/Dashboard
