@@ -11,6 +11,8 @@ namespace BigHauling.BusinessLogic.Data
         }
 
         public DbSet<Truck> Trucks { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
