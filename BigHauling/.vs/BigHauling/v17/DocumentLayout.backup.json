@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "E:\\projects\\mvcprojrestan\\BigHauling\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|e:\\projects\\mvcprojrestan\\bighauling\\bighauling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|solutionrelative:bighauling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|e:\\projects\\mvcprojrestan\\bighauling\\businesslogic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|solutionrelative:businesslogic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|e:\\projects\\mvcprojrestan\\bighauling\\bighauling\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|solutionrelative:bighauling\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|e:\\projects\\mvcprojrestan\\bighauling\\businesslogic\\core\\truckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|solutionrelative:businesslogic\\core\\truckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|e:\\projects\\mvcprojrestan\\bighauling\\businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|solutionrelative:businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|e:\\projects\\mvcprojrestan\\bighauling\\bighauling\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|solutionrelative:bighauling\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects\\mvcprojrestan\\BigHauling\\Domain\\Entities\\ULoginData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\UserAPI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BusinessLogic\\Core\\UserAPI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|e:\\projects\\mvcprojrestan\\bighauling\\businesslogic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6832E7E3-27EE-4FF7-82B4-6C24B7284D64}|BusinessLogic\\BigHauling.BusinessLogic.csproj|solutionrelative:businesslogic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +58,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Program.cs",
+              "RelativeDocumentMoniker": "BigHauling\\Program.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Program.cs",
+              "RelativeToolTip": "BigHauling\\Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:16:27.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:19:13.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TruckService.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\TruckService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Core\\TruckService.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\TruckService.cs",
+              "RelativeToolTip": "BusinessLogic\\Core\\TruckService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:48:09.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:47:55.621Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "BigHauling\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "BigHauling\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:47:30.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "BigHauling\\Controllers\\LoginController.cs",
@@ -54,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ULoginData.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\Domain\\Entities\\ULoginData.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\ULoginData.cs",
@@ -65,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "SessionBL.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\SessionBL.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\SessionBL.cs",
@@ -77,19 +157,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "BusinessLogic.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\BusinessLogic.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\BusinessLogic.cs",
               "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\BusinessLogic.cs",
               "RelativeToolTip": "BusinessLogic\\BusinessLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwDMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T15:54:45.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "ISession.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Interfaces\\ISession.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\ISession.cs",
@@ -101,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "UserAPI.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\UserAPI.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Core\\UserAPI.cs",
@@ -113,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "AdminAPI.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\AdminAPI.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Core\\AdminAPI.cs",
@@ -121,8 +201,7 @@
               "RelativeToolTip": "BusinessLogic\\Core\\AdminAPI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T15:53:53.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T15:53:53.158Z"
             }
           ]
         }

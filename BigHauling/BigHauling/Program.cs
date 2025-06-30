@@ -5,42 +5,31 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
 
-// Even though we don't inject UserManager/SignInManager into controllers,
-// the framework itself needs them registered in the DI container to function.
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddControllersWithViews();
+// Register IHttpContextAccessor
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    // These paths must be correctly set for authentication to work
-    options.LoginPath = "/Account/Login";
-    options.AccessDeniedPath = "/Account/AccessDenied";
-});
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Populate the service locator. This is the bridge that allows our
-// direct-instantiation BusinessLogic class to access framework services.
-ServiceActivator.ServiceProvider = app.Services;
+// Populate the service locator.
+BigHauling.Helpers.ServiceActivator.ServiceProvider = app.Services;
+
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseMigrationsEndPoint();
-}
-else
+if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -49,17 +38,16 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// These are essential for Identity to work.
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Seed the database with roles and the admin user.
+// Seed the database
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     try
     {
-        await DbInitializer.Initialize(services, configuration);
+        await DbInitializer.Initialize(services, app.Configuration);
     }
     catch (Exception ex)
     {
@@ -68,9 +56,10 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+
 app.MapControllerRoute(
-    name: "areas",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    name: "Admin",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

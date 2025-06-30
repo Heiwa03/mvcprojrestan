@@ -3,6 +3,7 @@ using BigHauling.BusinessLogic.Data;
 using BigHauling.BusinessLogic.Interfaces;
 using BigHauling.Domain.Entities;
 using BigHauling.Helpers;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +18,6 @@ namespace BigHauling.BusinessLogic
 
         public BusinessLogic()
         {
-            // Manually build configuration to get the connection string
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json")
@@ -41,22 +41,29 @@ namespace BigHauling.BusinessLogic
             return new TruckService(_context);
         }
 
-        public UserManager<ApplicationUser> GetUserManager()
+        private IServiceProvider GetRequestServices()
         {
             if (ServiceActivator.ServiceProvider == null)
             {
                 throw new InvalidOperationException("ServiceActivator is not initialized.");
             }
-            return ServiceActivator.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            
+            var httpContextAccessor = ServiceActivator.ServiceProvider.GetRequiredService<IHttpContextAccessor>();
+            if (httpContextAccessor.HttpContext == null)
+            {
+                throw new InvalidOperationException("HttpContext is not available. This service can only be used within an active HTTP request.");
+            }
+            return httpContextAccessor.HttpContext.RequestServices;
+        }
+
+        public UserManager<ApplicationUser> GetUserManager()
+        {
+            return GetRequestServices().GetRequiredService<UserManager<ApplicationUser>>();
         }
 
         public SignInManager<ApplicationUser> GetSignInManager()
         {
-             if (ServiceActivator.ServiceProvider == null)
-            {
-                throw new InvalidOperationException("ServiceActivator is not initialized.");
-            }
-            return ServiceActivator.ServiceProvider.GetRequiredService<SignInManager<ApplicationUser>>();
+             return GetRequestServices().GetRequiredService<SignInManager<ApplicationUser>>();
         }
     }
-} 
+}
