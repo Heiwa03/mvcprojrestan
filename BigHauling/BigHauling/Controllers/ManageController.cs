@@ -78,6 +78,8 @@ namespace BigHauling.Controllers
                 }
             }
 
+            user.PhoneNumberConfirmed = true;
+
             await _signInManager.RefreshSignInAsync(user);
             model.StatusMessage = "Your profile has been updated";
             return View(model);

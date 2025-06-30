@@ -1,0 +1,34 @@
+@model BigHauling.Models.ShoppingCartViewModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h1>Review Your Order</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Truck.Brand</td>
+                <td>@item.Truck.Model</td>
+                <td>@item.Truck.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-right">
+    <h3>Total: @Model.Total.ToString("C")</h3>
+    <form asp-controller="Cart" asp-action="SubmitOrder" method="post">
+        <button type="submit" class="btn btn-success">Confirm Order</button>
+    </form>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Back to Cart</a>
+</div> 

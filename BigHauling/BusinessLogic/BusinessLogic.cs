@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Threading.Tasks;
 
 namespace BigHauling.BusinessLogic
 {
@@ -64,6 +65,12 @@ namespace BigHauling.BusinessLogic
         public SignInManager<ApplicationUser> GetSignInManager()
         {
              return GetRequestServices().GetRequiredService<SignInManager<ApplicationUser>>();
+        }
+
+        public async Task SaveOrderAsync(Order order)
+        {
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
         }
     }
 }
