@@ -4,6 +4,7 @@ using BigHauling.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace BigHauling.BusinessLogic.Core
 {
@@ -69,6 +70,23 @@ namespace BigHauling.BusinessLogic.Core
         private async Task<bool> TruckExists(int id)
         {
             return await _context.Trucks.AnyAsync(e => e.Id == id);
+        }
+
+        public async Task<List<Order>> GetAllOrdersAsync()
+        {
+            return await _context.Orders
+                .Include(o => o.ApplicationUser)
+                .OrderByDescending(o => o.OrderDate)
+                .ToListAsync();
+        }
+
+        public async Task<Order?> GetOrderByIdAsync(int id)
+        {
+            return await _context.Orders
+                .Include(o => o.ApplicationUser)
+                .Include(o => o.OrderDetails)
+                    .ThenInclude(od => od.Truck)
+                .FirstOrDefaultAsync(o => o.Id == id);
         }
     }
 }

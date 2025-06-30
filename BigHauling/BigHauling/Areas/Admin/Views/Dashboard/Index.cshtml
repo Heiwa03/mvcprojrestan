@@ -1,8 +1,34 @@
 @model IEnumerable<BigHauling.Domain.Entities.Truck>
 
 @{
-    ViewData["Title"] = "Admin Dashboard - Truck Inventory";
+    ViewData["Title"] = "Admin Dashboard";
 }
+
+<div class="jumbotron">
+    <h1 class="display-4">Admin Dashboard</h1>
+    <p class="lead">Welcome to the administration panel. From here you can manage the content of the site.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Manage Trucks</h5>
+                <p class="card-text">View, add, edit, and delete trucks from the inventory.</p>
+                <a asp-action="Index" class="btn btn-primary">Go to Trucks</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Manage Orders</h5>
+                <p class="card-text">View and manage customer orders.</p>
+                <a asp-action="Orders" class="btn btn-primary">Go to Orders</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container mt-5">
     <div class="row mb-4">

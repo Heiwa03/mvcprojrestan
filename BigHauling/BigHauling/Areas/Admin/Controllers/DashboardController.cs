@@ -86,5 +86,27 @@ namespace BigHauling.Areas.Admin.Controllers
             await _adminAPI.DeleteTruckAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+        // GET: Admin/Dashboard/Orders
+        public async Task<IActionResult> Orders()
+        {
+            var orders = await _adminAPI.GetAllOrdersAsync();
+            return View(orders);
+        }
+
+        // GET: Admin/Dashboard/OrderDetails/5
+        public async Task<IActionResult> OrderDetails(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var order = await _adminAPI.GetOrderByIdAsync(id.Value);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            return View(order);
+        }
     }
 } 

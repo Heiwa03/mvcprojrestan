@@ -11,5 +11,7 @@ namespace BigHauling.BusinessLogic.Interfaces
         Task CreateTruckAsync(Truck truck);
         Task<bool> UpdateTruckAsync(Truck truck);
         Task<bool> DeleteTruckAsync(int id);
+        Task<List<Order>> GetAllOrdersAsync();
+        Task<Order?> GetOrderByIdAsync(int id);
     }
 } 
