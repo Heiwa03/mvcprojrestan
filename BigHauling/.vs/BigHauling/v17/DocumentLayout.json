@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\projects\\mvcprojrestan\\BigHauling\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|e:\\projects\\mvcprojrestan\\bighauling\\bighauling\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|solutionrelative:bighauling\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DF5B046-F3B0-48D6-912C-247AC5F9D83D}|Helpers\\BigHauling.Helpers.csproj|e:\\projects\\mvcprojrestan\\bighauling\\helpers\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DF5B046-F3B0-48D6-912C-247AC5F9D83D}|Helpers\\BigHauling.Helpers.csproj|solutionrelative:helpers\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|e:\\projects\\mvcprojrestan\\bighauling\\bighauling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4587144-E1B1-4CB8-81FF-248EAFB89231}|BigHauling\\BigHauling.csproj|solutionrelative:bighauling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,11 +66,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\Helpers\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "Helpers\\SessionExtensions.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\Helpers\\SessionExtensions.cs",
+              "RelativeToolTip": "Helpers\\SessionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:30:17.563Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "BigHauling\\Controllers\\CartController.cs",
+              "ToolTip": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\CartController.cs",
+              "RelativeToolTip": "BigHauling\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAjwGwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T18:30:10.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Program.cs",
               "RelativeDocumentMoniker": "BigHauling\\Program.cs",
@@ -70,12 +103,11 @@
               "RelativeToolTip": "BigHauling\\Program.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T17:16:27.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T17:16:27.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ChangePassword.cshtml.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "RelativeDocumentMoniker": "BigHauling\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
@@ -86,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TruckService.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\TruckService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Core\\TruckService.cs",
@@ -98,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "BigHauling\\Areas\\Admin\\Controllers\\DashboardController.cs",
@@ -110,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "BigHauling\\Controllers\\AccountController.cs",
@@ -122,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BigHauling\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "BigHauling\\Controllers\\LoginController.cs",
@@ -134,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ULoginData.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\Domain\\Entities\\ULoginData.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\ULoginData.cs",
@@ -145,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "SessionBL.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\SessionBL.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\SessionBL.cs",
@@ -157,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BusinessLogic.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\BusinessLogic.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\BusinessLogic.cs",
@@ -169,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ISession.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Interfaces\\ISession.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\ISession.cs",
@@ -181,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UserAPI.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\UserAPI.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Core\\UserAPI.cs",
@@ -193,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AdminAPI.cs",
               "DocumentMoniker": "E:\\projects\\mvcprojrestan\\BigHauling\\BusinessLogic\\Core\\AdminAPI.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Core\\AdminAPI.cs",
